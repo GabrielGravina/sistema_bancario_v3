@@ -25,6 +25,7 @@ class Conta:
         if valor<=self._saldo:
             self._saldo -= valor
 
+    @property
     def get_saldo(self):
         return self._saldo
     
@@ -36,10 +37,11 @@ cliente01 = Cliente('Gabriel', '123.456.789-01')
 cliente02 = Cliente('Juca', '987.654.321-98')
 print(Cliente.show_clients())
 
-# conta = Conta("0001", cliente01)
+
+conta01 = Conta("0001", cliente01)
 # conta.depositar(1320)
 # print(conta.nro_agencia)
-# print(conta.get_saldo())
+print(conta01.get_saldo)
 
 # print(cliente01)
 # print(conta.get_cliente())
